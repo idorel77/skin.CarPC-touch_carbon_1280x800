@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.re-touched" version="4.0.0" name="CarPC-touch_carbon_1280x800" provider-name="Dorel">
-	<requires>
-		<import addon="xbmc.gui" version="5.6.0"/>
-	</requires>
-	<extension point="xbmc.gui.skin" debugging="false">
-		<res width="1280" height="720" aspect="16:9" default="true" folder="16x9"/>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-    <summary lang="en">CarPC touch screen skin</summary>
-    <description lang="en">The skin is based on re-Touched skin(Jezz_X) modified by Dorel</description>
-    <disclaimer lang="en">Use this skin with a touch screen or a mouse(the pointer is not being shown)</disclaimer>
-    <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <forum></forum>
-    <website></website>
-    <email>i_dorel@yahoo.com</email>
-      <source>https://github.com/idorel77/skin.CarPC-touch_carbon/tree/1280x800</source>
-  </extension>
-</addon>
-
-
-
-
-
-
-
-
-
-<!--<?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.CarPC-touch_carbon"
-  version="4.0.0"
+  version="3.0.0"
   name="CarPC-touch_carbon_1280x800"
   provider-name="Dorel">
   <requires>
@@ -54,6 +25,4 @@
     <email></email>
       <source></source>
   </extension>
-</addon>-->
-
-
+</addon>
