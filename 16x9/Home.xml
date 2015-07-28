@@ -1,8 +1,8 @@
 <window id="0">
 	<onload>RunScript("special://skin/scripts/check_calibration.py")</onload>
-	<onunload condition="Container(9000).Hasfocus(2) | Container(9000).Hasfocus(3) | ControlGroup(9010).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
-	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(1)">ClearProperty(VideosDirectLink)</onunload>
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<!--<onunload condition="Container(9000).Hasfocus(2) | Container(9000).Hasfocus(3) | ControlGroup(9010).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
+	<onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(1)">ClearProperty(VideosDirectLink)</onunload>-->
+	<defaultcontrol always="true">4250</defaultcontrol>
 	<controls>
 		<include>CommonBackground</include>
 		<control type="videowindow">
@@ -22,11 +22,15 @@
 		
 
 			<!--Meniu by me-->
-	<control type="group">
+	<control type="group" id="4200">
 		<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>20</posx>
 			<posy>151</posy>
-			<control type="button">
+			<control type="button" id="4201">
+			<ondown>Control.SetFocus(4211)</ondown>
+                	<onup>Control.SetFocus(600)</onup>
+        		<onleft>Control.SetFocus()</onleft>
+			<onright>Control.SetFocus(4251)</onright>
 				<description>Video Button</description>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -89,12 +93,15 @@
 		</control>
 
 	
-		<control type="group">
+		<control type="group" id="4250">
 		<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>560r</posx>
 			<posy>152</posy>
 			<include>VisibleFadeEffect</include>
-			<control type="button">
+			<control type="button" id="4251">
+				<onup>Control.SetFocus(4241)</onup>
+                		<ondown>Control.SetFocus(4261)</ondown>
+                		<onleft>Control.SetFocus(4201)</onleft>
 				<description>Music Button</description>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -127,12 +134,15 @@
 			</control>
 		</control>
 		
-		<control type="group">
+		<control type="group" id="4260">
 		<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>428r</posx>
 			<posy>282</posy>
 			<include>VisibleFadeEffect</include>
-			<control type="button">
+			<control type="button" id="4261">
+				<onup>Control.SetFocus(4251)</onup>
+                		<ondown>Control.SetFocus(4271)</ondown>
+                		<onleft>Control.SetFocus(4211)</onleft>
 				<description>Programs Button</description>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -165,13 +175,16 @@
 			</control>
 		</control>
 		
-		<control type="group">
+		<control type="group" id="4270">
 		<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>560r</posx>
 			<posy>417</posy>
 			<visible>true</visible>
 			<include>VisibleFadeEffect</include>
-			<control type="button">
+			<control type="button" id="4271">
+				<onup>Control.SetFocus(4261)</onup>
+                		<ondown>Control.SetFocus(4281)</ondown>
+                		<onleft>Control.SetFocus(4241)</onleft>
 				<description>Shutdown Button</description>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -216,32 +229,64 @@
 		<include>HomeRecentlyAddedInfo</include>
 		<include>BottomNowPLaying</include>
 		
-		<control type="panel" id="9002">
-			<visible>!Window.IsActive(PlayerControls)</visible>
-			<include>SubMenuCommonLayout</include>
-			<content>
-				<!--<item>
-					<label></label>
-					<onclick>RunScript("special://skin/scripts/system_poweroff.py")</onclick>
-					<icon>icon_shutdown_w.png</icon>
-				</item>-->
-				<!--<item>
-					<label></label>
-					<onclick>ReloadSkin</onclick>
-					<icon>icon_refresh_w.png</icon>
-				</item>-->
-				<item>
-					<label></label>
-					<onclick>ActivateWindow(Favourites)</onclick>
-					<icon>icon_favourites_w.png</icon>
-				</item>
-				<item>
-					<label></label>
-					<onclick>ActivateWindow(Settings)</onclick>
-					<icon>icon_settings_w.png</icon>
-				</item>
-			</content>
-		</control>
-   		<include>BehindDialogFadeOut</include>
+		<control type="group" id="4280">
+           <include>Window_OpenClose_Animation_Slide_Up</include>
+            <posx>95r</posx>
+            <posy>85r</posy>
+            <control type="button" id="4281">
+                <ondown>Control.SetFocus(4291)</ondown>
+                <onup>Control.SetFocus(4271)</onup>
+                <onleft>Control.SetFocus(4291)</onleft>
+				<onright></onright>
+                <description>Settings Button</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>82</width>
+                <height>82</height>
+                <texturenofocus  border="4">floor_button_t.png</texturenofocus>
+                <texturefocus border="4">floor_buttonfo.png</texturefocus>
+                <onclick>ActivateWindow(Settings)</onclick>
+            </control>   
+            <control type="image">
+                <description>Settings Button Image</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>82</width>
+                <height>82</height>
+                <texture>icon_settings_w.png</texture>
+                <bordersize>12</bordersize>
+            </control>
+        </control>
+        
+        <control type="group" id="4290">
+            <include>Window_OpenClose_Animation_Slide_Up</include>
+            <posx>190r</posx>
+            <posy>85r</posy>
+            <control type="button" id="4291">
+                <ondown>Control.SetFocus(605)</ondown>
+                <onup>Control.SetFocus(4281)</onup>
+                <onleft>Control.SetFocus(605)</onleft>
+				<onright>Control.SetFocus(4281)</onright>
+                <description>Settings Button</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>82</width>
+                <height>82</height>
+                <texturenofocus  border="4">floor_button_t.png</texturenofocus>
+                <texturefocus border="4">floor_buttonfo.png</texturefocus>
+                <onclick>ActivateWindow(Favourites)</onclick>
+            </control>   
+            <control type="image">
+                <description>Favourites Button Image</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>82</width>
+                <height>82</height>
+                <texture>icon_favourites_w.png</texture>
+                <bordersize>12</bordersize>
+            </control>
+        </control>
+        
+   	<include>BehindDialogFadeOut</include>
 	</controls>	
 </window>
