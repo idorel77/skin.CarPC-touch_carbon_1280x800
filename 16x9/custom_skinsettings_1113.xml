@@ -325,7 +325,19 @@
 				<onclick>Skin.ToggleSetting(HideHomeButtonFavourites)</onclick>
 				<selected>!Skin.HasSetting(HideHomeButtonFavourites)</selected>
 			</control>
-			
+			<control type="radiobutton" id="206">
+				<description>Connect3g</description>
+				<height>55</height>
+				<width>920</width>
+				<font>font24_title</font>
+				<focusedcolor>blue</focusedcolor>
+				<textcolor>black</textcolor>
+				<texturefocus border="0,2,0,2">MenuItemNF.png</texturefocus>
+				<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+				<label>Show Connect3g Button</label>
+				<onclick>Skin.ToggleSetting(HideHomeButtonConnect3g)</onclick>
+				<selected>!Skin.HasSetting(HideHomeButtonConnect3g)</selected>
+			</control>
 			<!--<control type="label" id="201">
 				<height>50</height>
 				<width>920</width>
