@@ -5,11 +5,11 @@ skin_kodi
 This skin still have res. 1280x720 but i modified home interface to see the logo normal(not oval).
 
 - update 27-09-20015
-added new page for connecting 3g. If you don't need -> Hide button from - Settings/Skin settings/settings buttons/
-This working only with sakis3g
-The buttons send commands :
-sudo /usr/bin/modem3g/sakis3g connect
-sudo /usr/bin/modem3g/sakis3g disconnect
+ added new page for connecting 3g. If you don't need -> Hide button from - Settings/Skin settings/settings buttons/
+ This working only with sakis3g
+ The buttons send commands :
+ sudo /usr/bin/modem3g/sakis3g connect
+ sudo /usr/bin/modem3g/sakis3g disconnect
 
 For install sakis3g 
 wget "http://raspberry-at-home.com/files/sakis3g.tar.gz"
