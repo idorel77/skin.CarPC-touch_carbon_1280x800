@@ -4,7 +4,10 @@ skin.CarPC-touch_carbon_1280x800
 skin_kodi
 This skin still have res. 1280x720 but i modified home interface to see the logo normal(not oval).
 
-- update 27-09-20015
+Update 2.09.2015
+- Fixed file manager and add button in home.
+
+update 27-09-20015
 - added new page for connecting 3g. If you don't need -> Hide button from - Settings/Skin settings/settings buttons/
 - This working only with sakis3g
 - The buttons send commands :
