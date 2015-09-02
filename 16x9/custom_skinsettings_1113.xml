@@ -326,7 +326,7 @@
 				<selected>!Skin.HasSetting(HideHomeButtonFavourites)</selected>
 			</control>
 			<control type="radiobutton" id="205">
-				<description>Pointer</description>
+				<description>File Manager</description>
 				<height>55</height>
 				<width>920</width>
 				<font>font24_title</font>
@@ -334,9 +334,9 @@
 				<textcolor>black</textcolor>
 				<texturefocus border="0,2,0,2">MenuItemNF.png</texturefocus>
 				<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
-				<label>Show Pointer</label>
-				<onclick>Skin.ToggleSetting(HideHomeButtonPointerControl)</onclick>
-				<selected>!Skin.HasSetting(HideHomeButtonPointerControl)</selected>
+				<label>Show Button File Manager</label>
+				<onclick>Skin.ToggleSetting(HideHomeButtonFileManager)</onclick>
+				<selected>!Skin.HasSetting(HideHomeButtonFileManager)</selected>
 			</control>
 			<control type="radiobutton" id="206">
 				<description>Connect3g</description>
