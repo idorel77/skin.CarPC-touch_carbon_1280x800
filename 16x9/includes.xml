@@ -1474,6 +1474,7 @@
 			<height>32</height>
 			<texture>pointer-focus.png</texture>
 		</control>
+<<<<<<< HEAD
 		<control type="image" id="3">
 			<description>Pointer Drag Image</description>
 			<posx>0</posx>
@@ -1481,6 +1482,99 @@
 			<width>32</width>
 			<height>32</height>
 			<texture>pointer-focus.png</texture>
+=======
+	</include>
+	<include name="OptionsButtonCommons">
+		<control type="group">
+			<include>Window_OpenClose_Animation_Slide_Down</include>
+			<posx>75r</posx>
+			<posy>1</posy>
+			<visible>!Window.IsActive(PlayerControls)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>Options Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>75</width>
+				<height>75</height>
+				<font>-</font>
+				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<texturefocus border="5">floor_buttonFO.png</texturefocus>
+				<onclick>Skin.ToggleSetting(MediaSubMenuVisible)</onclick>
+			</control>
+			<control type="image">
+				<description>Options Button Image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>75</width>
+				<height>75</height>
+				<texture>icon_system.png</texture>
+			</control>
+		</control>
+	</include>
+	<include name="DialogCloseButtonCommons">  
+        <control type="button">
+            <description>Close Button</description>
+            <posx></posx>
+            <posy>0</posy>
+            <width>45</width>
+            <height>45</height>
+            <font>-</font>
+            <onclick>back</onclick>
+            <texturefocus>iconback-focus.png</texturefocus>
+            <texturenofocus></texturenofocus>
+        </control>
+        <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>45</width>
+            <height>45</height>
+            <texture>icon_close.png</texture>
+        </control>
+    </include>
+	<include name="MediaSubMenu">
+		<control type="button" id="19">
+			<description>Filter button needed for panel below to work</description>
+			<visible>false</visible>
+		</control>
+		<control type="panel" id="9002">
+			<visible>!Window.IsActive(PlayerControls)</visible>
+			<include>Window_OpenClose_Animation_Slide_Up</include>
+			<include>SubMenuCommonLayout</include>
+			<content>
+				<item>
+					<label>1036</label>
+					<onclick>ActivateWindow(1115)</onclick>
+					<icon>arrow-big-up.png</icon>
+				</item>
+				<item>
+					<label>587</label>
+					<onclick condition="!Container.CanFilterAdvanced">SendClick(19)</onclick>
+					<onclick condition="Container.CanFilterAdvanced">Filter</onclick>
+					<icon>icon_filter_w.png</icon>
+					<visible>!Container.Filtered</visible>
+				</item>
+				<item>
+					<label>587</label>
+					<onclick condition="!Container.CanFilterAdvanced">SendClick(19)</onclick>
+					<onclick condition="Container.CanFilterAdvanced">Filter</onclick>
+					<icon>icon_filter_on_w.png</icon>
+					<visible>Container.Filtered</visible>
+				</item>
+				<item>
+					<label>31202</label>
+					<onclick>Container.NextViewMode</onclick>
+					<icon>icon_view_w.png</icon>
+				</item>
+				
+				<item>
+					<label>31200</label>
+					<onclick>ParentDir</onclick>
+					<icon>icon_back_w.png</icon>
+				</item>
+				
+			</content>
+>>>>>>> origin/master
 		</control>
 		<control type="image" id="4">
 			<description>Pointer Click Image</description>
